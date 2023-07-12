@@ -58,7 +58,8 @@ function App() {
     e.preventDefault();
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
     const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
-    const newPost = { id, title: postTitle, dateTime, body: postBody};
+    console.log(dateTime);
+    const newPost = { id:id, title: postTitle, datetime:dateTime, body: postBody};
     const allPosts = [...posts, newPost ];
     setPosts(allPosts);
     setPostTitle('');
